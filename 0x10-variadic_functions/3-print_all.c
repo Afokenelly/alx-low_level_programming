@@ -3,10 +3,11 @@
 	#include <stdio.h>
 
 
-	/**
-	 * print_all - prints anything
-	 * @format: list of types of arguments passed to the function
-	 */
+/**
+ * _printc - Funtion that prints a char
+ * @valist: type va_list
+ * @s: type char
+ */
 	void print_all(const char * const format, ...)
 	{
 		int i = 0;
