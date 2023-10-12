@@ -3,7 +3,7 @@
 /**
  * sum_them_all - sum all the parameters passed to
  * the function
- * @n: the number of arguments to be passed
+ * @n: the number of arguments to be passed to the sum
  * Return: sum
  */
 
@@ -26,7 +26,7 @@ int sum_them_all(const unsigned int n, ...)
 			sum += va_arg(argument, const unsigned int);
 		}
 	}
-	va_end (argument);
+	va_end(argument);
 	return (sum);
 }
 
