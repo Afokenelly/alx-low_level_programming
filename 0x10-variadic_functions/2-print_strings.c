@@ -3,7 +3,7 @@
 /**
  * print_strings - print strings passed to a function
  * as parameter
- * @separator: string to be printed between two strings
+ * @separator: string to be printed between teo strings
  * @n: number of strings to print
  */
 
@@ -16,23 +16,22 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(ptr_str, n);
 
-		for (i = 0; i < n; i++)
-		{
-			str = va_arg(ptr_str, char *);
-			if (str == NULL)
-			{
-				printf("nil");
-			}
-			else
-			{
-				printf("%s", str);
-			}
-			if (i != (n - 1) && separator != NULL)
-			{
-				printf("%s", separator);
-			}
-		}
-			printf("\n");
-			va_end(ptr_str);
-}
+	for (i = 0; i < n; i++)
+	{
+		str = va_arg(ptr_str, char *);
 
+		if (str == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", str);
+		}
+
+		if (i != (n - 1) && separator != NULL)
+			printf("%s", separator);
+	}
+	printf("\n");
+	va_end(ptr_str);
+}
